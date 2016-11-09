@@ -55,7 +55,9 @@ namespace _HandMotionAirVR
 		string ipString = "127.0.0.1";
 		int port = 50377;
 		string stCurrentDir = null;
-		public const string UnityExecName = "HandAction001";
+		public const string UnityExecName = "Robotis_vsido_connect";
+//		public const string UnityExecName = "HandAction001";
+
 		string UnityExecNameFullPath = null;
 		Process UnityProcess = null;
 
@@ -956,7 +958,9 @@ namespace _HandMotionAirVR
 			ServerWaitingThread.Priority = ThreadPriority.Lowest;
 			ServerWaitingThread.Start();
 			button8.Enabled = false;
+//			UnityProcess = Process.Start(UnityExecNameFullPath);
 			UnityProcess = Process.Start(UnityExecNameFullPath, "-popupwindow");
+
 		}
 
 		void ServerWaiting()
